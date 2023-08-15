@@ -1,0 +1,11 @@
+<div class="container margin-top-100" style="width: 600px;">
+<h1 class="text-center">My tasks</h1>
+<ul class="list-group d-grid gap-3">
+<% @tasks.each do |task| %>
+  <h3>
+  <li class="list-group-item p-3 bg-light border text-decoration-none"><%= link_to task.title, task_path(task.id) %></li>
+  </h3>
+<% end %>
+</ul>
+<p class="mt-100 text-end"><%= link_to "Create New Task", tasks_new_path %><p>
+</div>
