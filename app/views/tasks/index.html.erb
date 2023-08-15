@@ -1,9 +1,9 @@
 <div class="container margin-top-100" style="width: 600px;">
-<h1 class="text-center">My tasks</h1>
+<h1 class="text-center p-5">My tasks</h1>
 <ul class="list-group d-grid gap-3">
 <% @tasks.each do |task| %>
   <h3>
-  <li class="list-group-item p-3 bg-light border text-decoration-none"><%= link_to task.title, task_path(task.id) %></li>
+  <li class="list-group-item p-3 bg-light border text-decoration-none" style="text-decoration:none;"><%= link_to task.title, task_path(task.id), class:"text-decoration-none" %></li>
   </h3>
 <% end %>
 </ul>
